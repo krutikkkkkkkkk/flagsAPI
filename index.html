@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html  lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag API : reboot13</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            font-family:'Poppins', sans-serif;
+            background-color: aliceblue;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info {
+            display: flex;
+            height: 40%;
+            justify-content: center;
+            flex-direction: column;
+            padding: 3rem;
+        }
+        .info p{
+          font-weight: 500;
+        }
+        code{
+            margin-top: 1rem;
+            background-color: #fff;
+            font-size: 1.2em;
+            width: max-content;
+            text-align: center;
+            border-radius: .3rem;
+            padding:.1rem 1rem; 
+            margin-top: 1rem
+        }
+        .endpoints{
+            display: flex;
+            height: 100%;
+            width: 100%;
+            flex-direction: column;
+            background-color: #222;
+            color: aliceblue;
+        }
+    
+      h4{
+           margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+        iframe{
+            border: 0;
+            background-color: #fff;
+            height: 7rem;
+        }
+        a {
+            text-decoration: none;
+            color: #006fef;
+            font-weight: bold;
+        }
+        a:visited{
+            color: #006fef;
+        }
+        .allflags,.name,.flag, .code{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 1rem 0;
+            background-color: #ffffff17;
+            padding: 3rem;
+        }
+        footer{
+            background: #222;
+            padding: 1rem 3rem;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<main>  
+        <div class="info">
+            <h2 style="margin-bottom: 1rem;">Flags API <a href="https://github.com/reboot13-git/flagsAPI" target="_blank"><svg height=1.5rem xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M18,10.82a1,1,0,0,0-1,1V19a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V8A1,1,0,0,1,5,7h7.18a1,1,0,0,0,0-2H5A3,3,0,0,0,2,8V19a3,3,0,0,0,3,3H16a3,3,0,0,0,3-3V11.82A1,1,0,0,0,18,10.82Zm3.92-8.2a1,1,0,0,0-.54-.54A1,1,0,0,0,21,2H15a1,1,0,0,0,0,2h3.59L8.29,14.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L20,5.41V9a1,1,0,0,0,2,0V3A1,1,0,0,0,21.92,2.62Z"/>
+                </svg></a> </h2>
+
+            <p>
+                The Flags API provides Flags information of all Countries <br> 
+                Retrieve a Unicode, Code ,Flag emoji/symbol and Country Name.
+            </p>
+
+            <code> <a href="api/flags" target="_blank">api/flags</a> </code>
+        </div>
+
+        <div class="endpoints">
+           <h2 style="padding:.6rem 0 0 3rem">End Points</h2>
+
+           <div class="allflags">
+            <h4>All Flags</h4>
+            <code ><a href="api/flags" target="_blank">api/flags</a></code>
+            <h4>Result: Example</h4>
+            <iframe lang="en" src="/api/flags" style="overflow-y: hidden;"></iframe>
+           </div>
+
+           <div class="flag">
+            <h4>Flag</h4>
+            <code><a href="api/flag/🇮🇳" target="_blank">/api/flag/{flag}</a></code> <br>
+            <h4>Results: Example - api/flag/ 🇮🇳</h4>
+            <iframe  lang="en" src="/api/flag/🇮🇳"></iframe>
+           </div>
+
+           <div class="name">
+            <h4>Flag Name</h4>
+            <code><a href="api/flagName/United States" target="_blank">/api/flagName/{name}</a></code> <br>
+            <h4>Results: Example - api/flagName/United States</h4>
+            <iframe  lang="en" src="/api/flagName/United States"></iframe>
+           </div>
+
+          
+        
+
+           
+           
+        </div>
+</main>
+    
+
+<footer>
+    &copy; <script>document.write(new Date().getFullYear())</script> Reboot13
+</footer>
+</body>
+</html>
