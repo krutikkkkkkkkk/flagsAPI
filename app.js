@@ -35,10 +35,9 @@ app.get('/api/flagCode/:code', (req, res)=> {
     res.send(code)
 })
 
-const port = process.env.PORT || 3000
-app.listen(port, ()=> {
-    console.log(`Listening Port on ${port}`)
-})
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
 
 
 ///Flag Name
