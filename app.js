@@ -22,7 +22,7 @@ app.get('/api/flag/:flag', (req, res)=> {
 })
 
 app.get('/api/flagName/:name', (req, res)=> {
-    const name = flags.find(n => n.name === capitalizeFirstLetter(req.params.name))
+    const name = flags.find(n => n.name === capitalize(req.params.name))
     if (!name) res.status(404).send('Invalid Name')
     
     res.send(name)
@@ -41,9 +41,14 @@ app.listen(process.env.PORT || 3000, function(){
 
 
 ///Flag Name
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
+function capitalize(input) {  
+    var words = input.split(' ');  
+    var CapitalizedWords = [];  
+    words.forEach(element => {  
+        CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));  
+    });  
+    return CapitalizedWords.join(' ');  
+}  
 
 ///Flag Code
 function capitalizeLetter(string) {
