@@ -41,8 +41,9 @@ app.listen(process.env.PORT || 3000, function(){
 
 
 ///Flag Name
-function capitalize(input) {  
-    var words = input.split(' ');  
+function capitalize(input) { 
+    let name = input.toLowerCase() 
+    var words = name.split(' '); 
     var CapitalizedWords = [];  
     words.forEach(element => {  
         CapitalizedWords.push(element[0].toUpperCase() + element.slice(1, element.length));  
