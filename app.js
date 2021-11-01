@@ -16,21 +16,24 @@ app.get('/api/flags', (req, res)=> {
 
 app.get('/api/flag/:flag', (req, res)=> {
     const flag = flags.find(f => f.flag === req.params.flag)
-    if (!flag) res.status(404).send('Invalid Flag')
+    let invalid = { "success": false}
+    if (!flag) res.status(404).send(invalid)
     
     res.send(flag)
 })
 
 app.get('/api/flagName/:name', (req, res)=> {
     const name = flags.find(n => n.name === capitalize(req.params.name))
-    if (!name) res.status(404).send('Invalid Name')
+    let invalid = { "success": false}
+    if (!name) res.status(404).send(invalid)
     
     res.send(name)
 })
 
 app.get('/api/flagCode/:code', (req, res)=> {
     const code = flags.find(c => c.code === capitalizeLetter(req.params.code))
-    if (!code) res.status(404).send('Invalid Code')
+    let invalid = { "success": false}
+    if (!code) res.status(404).send(invalid)
     
     res.send(code)
 })
